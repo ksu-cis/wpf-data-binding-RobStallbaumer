@@ -11,7 +11,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <local:PersonList Grid.Column="0" SelectionChanged="OnSelectionChanged"/>
+        <local:PersonList Grid.Column="0" SelectionChanged="PersonList_SelectionChanged"/>
         <local:PersonControl x:Name="pcDetails" Grid.Column="1"/>
         <TextBox Name="txtFirstName" Text="{Binding Path=FirstName}"/>
         <TextBox Name="txtLastName" Text="{Binding Path=LastName}"/>

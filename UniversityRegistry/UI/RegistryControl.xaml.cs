@@ -41,13 +41,9 @@ namespace UniversityRegistry.UI
             DataContext = people;
         }
 
-        /// <summary>
-        /// Updates the DataContext of the PersonControl to the item selected in
-        /// the PersonList
-        /// </summary>
-        /// <param name="sender">The List of People</param>
-        /// <param name="e">The selection details</param>
-        private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+       
+
+        private void PersonList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count == 0)
             {
