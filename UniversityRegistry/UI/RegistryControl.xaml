@@ -11,7 +11,12 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <local:PersonList Grid.Column="0"/>
-        <local:PersonControl Grid.Column="1"/>
+        <local:PersonList Grid.Column="0" SelectionChanged="OnSelectionChanged"/>
+        <local:PersonControl x:Name="pcDetails" Grid.Column="1"/>
+        <TextBox Name="txtFirstName" Text="{Binding Path=FirstName}"/>
+        <TextBox Name="txtLastName" Text="{Binding Path=LastName}"/>
+        <DatePicker Name="dpDateOfBirth" SelectedDate="{Binding Path=DateOfBirth}"/>
+        <CheckBox Name="cbActive" Margin="0 10 0 0" IsChecked="{Binding Path=Active}">Active</CheckBox>
+        <TextBox Name="txtRole" Text="{Binding Path=Role}"/>
     </Grid>
 </UserControl>
